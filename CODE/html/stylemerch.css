@@ -246,7 +246,7 @@ footer a:hover {
 
 /* Le voile rouge et le texte */
 .item-galerie::after {
-    content: attr(data-ecurie); /* ou contenu géré via le span */
+    content: attr(data-ecurie); 
 }
 
 .nom-ecurie {
@@ -255,7 +255,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(225, 6, 0, 0.6); /* Voile rouge transparent */
+    background-color: rgba(225, 6, 0, 0.6); 
     color: white;
     font-family: "Lexend", Arial, sans-serif;
     font-weight: 800;
