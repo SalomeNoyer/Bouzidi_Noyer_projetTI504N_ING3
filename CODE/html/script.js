@@ -1,6 +1,6 @@
-// ==========================================
+
 // CARROUSEL
-// ==========================================
+
 
 // Récupération des slides
 var slides = document.querySelectorAll(".slide");
@@ -219,9 +219,10 @@ chargerPodium();
 
 // Actualisation automatique toutes les heures
 setInterval(chargerPodium, 3600000);
-// ==========================================
+
+
 // PODIUM DU GRAND PRIX PRÉCÉDENT
-// ==========================================
+
 
 function chargerAncienPodium() {
 

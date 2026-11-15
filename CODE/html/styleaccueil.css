@@ -9,6 +9,7 @@ body {
     background-color: var(--noir);
     color: white;
     font-family: "Lexend", Arial, sans-serif;
+    width: 100%;
     margin: 0;
 }
 
@@ -42,26 +43,7 @@ body {
     opacity: 1;
 }
 
-/* Bande rouge en diagonale à droite */
-.slide::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30%;
-    height: 100%;
-    background-color: var(--rouge);
-    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
-    z-index: 0;
-}
 
-.slide h1,
-.slide p {
-    position: relative;      /* pour passer devant la bande rouge */
-    z-index: 1;
-    max-width: 60%;
-    margin: 0;
-}
 
 .slide h1 {
     font-size: 3em;
@@ -100,6 +82,59 @@ body {
 #prev { left: 15px; }
 #next { right: 15px; }
 
+/* CARROUSEL F1 AVEC IMAGES */
+
+/* style général des diapositives */
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Image 1 : Course */
+.slide:nth-child(1) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-course.jpg");
+}
+
+/* Image 2 : Podium */
+.slide:nth-child(2) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-podium.jpg");
+}
+
+/* Image 3 : Départ */
+.slide:nth-child(3) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-depart.jpg");
+}
+
+/* Image 4 : Stands */
+.slide:nth-child(4) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-stands.jpg");
+}
+
 /* ===== Petits points ===== */
 #points {
     position: absolute;
@@ -112,7 +147,7 @@ body {
 .point {
     display: inline-block;
     width: 30px;
-    height: 5px;             /* des barres plutôt que des ronds, plus "F1" */
+    height: 5px;            
     margin: 0 5px;
     background-color: rgba(255, 255, 255, 0.4);
     cursor: pointer;
@@ -120,11 +155,6 @@ body {
 
 .point.actif {
     background-color: var(--rouge);
-}
-/* ===== Page largeur ===== */
-body {
-    width: 100%;
-    margin: 0;
 }
 
 /* ===== Menu : barre fine avec séparateurs ===== */
@@ -255,33 +285,29 @@ h1, h2, h3, nav a, footer a {
     font-weight: 800;
     text-transform: uppercase;
 }
-/* ==========================================
-   CLASSEMENTS F1
-   ========================================== */
+/* CLASSEMENTS F1 */
 
-/* Espacement entre les lignes */
 #classement-pilotes div,
 #classement-ecuries div {
     padding: 10px;
     margin: 8px 0;
     border-radius: 8px;
 }
-
-/* Première place : or */
+/* premiere place */
 #classement-pilotes div:nth-child(1),
 #classement-ecuries div:nth-child(1) {
     border-left: 5px solid #FFD700;
     background-color: #454545;
 }
 
-/* Deuxième place : argent */
+/* Deuxième place */
 #classement-pilotes div:nth-child(2),
 #classement-ecuries div:nth-child(2) {
     border-left: 5px solid #C0C0C0;
     background-color: #454545;
 }
 
-/* Troisième place : bronze */
+/* Troisième place */
 #classement-pilotes div:nth-child(3),
 #classement-ecuries div:nth-child(3) {
     border-left: 5px solid #CD7F32;
@@ -294,7 +320,7 @@ h1, h2, h3, nav a, footer a {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Animation au passage de la souris */
+/* animation au passage de la souris */
 .bloc-podium:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(225, 0, 0, 0.25);
@@ -319,7 +345,7 @@ h1, h2, h3, nav a, footer a {
     margin-bottom: 25px;
 }
 
-/* Lignes des pilotes et écuries */
+/* lignes des pilotes et écuries */
 #classement-pilotes div,
 #classement-ecuries div {
     padding: 15px 20px;
@@ -331,14 +357,14 @@ h1, h2, h3, nav a, footer a {
     transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Animation des lignes */
+/* animation des lignes */
 #classement-pilotes div:hover,
 #classement-ecuries div:hover {
     transform: translateX(8px);
     background-color: #505057;
 }
 
-/* Texte pour accéder au classement complet */
+/* clique pour accéder au classement complet */
 .bloc-podium .clic {
     margin-top: 25px;
     color: #cccccc;
@@ -350,7 +376,7 @@ h1, h2, h3, nav a, footer a {
     color: #ff4444;
 }
 
-/* Accessibilité : limiter les animations si demandé */
+/* limiter les animations si demandé */
 @media (prefers-reduced-motion: reduce) {
     .bloc-podium,
     #classement-pilotes div,
@@ -359,60 +385,7 @@ h1, h2, h3, nav a, footer a {
         transition: none;
     }
 }
-/* ==========================================
-   CARROUSEL F1 AVEC IMAGES
-   ========================================== */
 
-/* Style général des diapositives */
-.slide {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Image 1 : Course */
-.slide:nth-child(1) {
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.85),
-            rgba(0, 0, 0, 0.20)
-        ),
-        url("img_accueil/f1-course.jpg");
-}
-
-/* Image 2 : Podium */
-.slide:nth-child(2) {
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.85),
-            rgba(0, 0, 0, 0.20)
-        ),
-        url("img_accueil/f1-podium.jpg");
-}
-
-/* Image 3 : Départ */
-.slide:nth-child(3) {
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.85),
-            rgba(0, 0, 0, 0.20)
-        ),
-        url("img_accueil/f1-depart.jpg");
-}
-
-/* Image 4 : Stands */
-.slide:nth-child(4) {
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.85),
-            rgba(0, 0, 0, 0.20)
-        ),
-        url("img_accueil/f1-stands.jpg");
-}
 
 /* Bande rouge légèrement transparente */
 .slide::after {

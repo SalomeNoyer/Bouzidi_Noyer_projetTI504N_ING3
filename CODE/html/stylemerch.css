@@ -44,26 +44,6 @@ body {
     opacity: 1;
 }
 
-/* Bande rouge en diagonale à droite */
-.slide::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30%;
-    height: 100%;
-    background-color: var(--rouge);
-    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
-    z-index: 0;
-}
-
-.slide h1,
-.slide p {
-    position: relative;       /* pour passer devant la bande rouge */
-    z-index: 1;
-    max-width: 60%;
-    margin: 0;
-}
 
 .slide h1 {
     font-size: 3em;
@@ -102,6 +82,59 @@ body {
 #prev { left: 15px; }
 #next { right: 15px; }
 
+/* CARROUSEL F1 AVEC IMAGES */
+
+/* style général des diapositives */
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Image 1 : Course */
+.slide:nth-child(1) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-course.jpg");
+}
+
+/* Image 2 : Podium */
+.slide:nth-child(2) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-podium.jpg");
+}
+
+/* Image 3 : Départ */
+.slide:nth-child(3) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-depart.jpg");
+}
+
+/* Image 4 : Stands */
+.slide:nth-child(4) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-stands.jpg");
+}
+
 /* ===== Petits points ===== */
 #points {
     position: absolute;
@@ -114,7 +147,7 @@ body {
 .point {
     display: inline-block;
     width: 30px;
-    height: 5px;            /* des barres plutôt que des ronds, plus "F1" */
+    height: 5px;           
     margin: 0 5px;
     background-color: rgba(255, 255, 255, 0.4);
     cursor: pointer;
@@ -124,7 +157,7 @@ body {
     background-color: var(--rouge);
 }
 
-/* ===== Menu : barre fine avec séparateurs ===== */
+/*  menu : barre fine avec séparateurs  */
 nav {
     display: flex;
     background-color: var(--gris);
@@ -140,11 +173,11 @@ nav a {
     padding: 12px 5px;
     font-weight: bold;
     text-transform: uppercase;
-    border-left: 1px solid white;    /* le petit trait de séparation */
+    border-left: 1px solid white;    
 }
 
 nav a:first-child {
-    border-left: none;               /* pas de trait avant le 1er lien */
+    border-left: none;               
 }
 
 nav a:hover {
@@ -227,9 +260,8 @@ footer a:hover {
 
 .item-galerie {
     position: relative;
-    width: 100%;
-    width: 100%;
-    height: 350px;
+    width: 1024px;
+    height: 390px;
     margin: 0 auto 25px auto;
     border-radius: 8px;
     overflow: hidden;
