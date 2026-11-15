@@ -1,0 +1,460 @@
+/* ===================================== */
+/* STYLE GÉNÉRAL */
+/* ===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #14131c;
+    color: white;
+
+    font-family: 'Lexend', sans-serif;
+}
+
+
+/* ===================================== */
+/* HEADER */
+/* ===================================== */
+
+header {
+    padding: 25px 35px;
+
+    border-bottom: 3px solid #e10600;
+}
+
+.bouton-retour {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background-color: #36363e;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.bouton-retour:hover {
+    background-color: #e10600;
+}
+
+
+/* ===================================== */
+/* CONTENU PRINCIPAL */
+/* ===================================== */
+
+main {
+    width: 95%;
+    max-width: 1200px;
+
+    margin: 45px auto;
+}
+
+
+/* ===================================== */
+/* INTRODUCTION */
+/* ===================================== */
+
+.introduction {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.introduction h1 {
+    font-size: 38px;
+    font-weight: 800;
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    color: #c5c5cb;
+    font-size: 17px;
+}
+
+
+/* ===================================== */
+/* CARTES PRINCIPALES */
+/* ===================================== */
+
+.carte-presentation,
+.carte-projet,
+.carte-equipe {
+    background-color: #36363e;
+
+    padding: 45px;
+
+    margin-bottom: 30px;
+
+    border-radius: 35px;
+
+    border-bottom: 5px solid #e10600;
+}
+
+.carte-presentation h2,
+.carte-projet h2,
+.carte-equipe h2 {
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+
+/* ===================================== */
+/* PHOTOS DU BINÔME */
+/* ===================================== */
+
+.photos-binome {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 35px;
+
+    margin: 35px auto;
+
+    flex-wrap: wrap;
+}
+
+.carte-photo {
+    width: 300px;
+    height: 350px;
+
+    border: 3px solid #e10600;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    background-color: #24242e;
+
+    transition: 0.3s;
+}
+
+.carte-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.carte-photo:hover {
+    transform: scale(1.04);
+
+    box-shadow: 0 0 25px rgba(225, 6, 0, 0.4);
+}
+
+
+/* ===================================== */
+/* TEXTE DE PRÉSENTATION */
+/* ===================================== */
+
+.texte-presentation {
+    max-width: 900px;
+
+    margin: 35px auto 0;
+
+    text-align: center;
+}
+
+.texte-presentation p {
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: #e5e5e8;
+
+    margin-bottom: 20px;
+}
+
+.texte-presentation strong {
+    color: white;
+}
+
+
+/* ===================================== */
+/* SECTION PROJET */
+/* ===================================== */
+
+.carte-projet p {
+    max-width: 950px;
+
+    margin: 20px auto;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+
+    color: #e5e5e8;
+
+    text-align: center;
+}
+
+
+/* ===================================== */
+/* PRÉSENTATION DE L'ÉQUIPE */
+/* ===================================== */
+
+.cartes-personnes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.personne {
+    background-color: #24242e;
+
+    width: 350px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border-left: 5px solid #e10600;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.personne:hover {
+    transform: translateY(-5px);
+}
+
+.personne h3 {
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.personne p {
+    color: #c5c5cb;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+
+/* ===================================== */
+/* CONCLUSION */
+/* ===================================== */
+
+.conclusion {
+    text-align: center;
+
+    padding: 50px 25px;
+
+    margin-top: 40px;
+
+    border: 2px solid #e10600;
+
+    border-radius: 30px;
+
+    background-color: #24242e;
+}
+
+.conclusion h2 {
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.conclusion p {
+    color: #c5c5cb;
+
+    margin-bottom: 30px;
+
+    font-size: 17px;
+}
+
+
+/* ===================================== */
+/* BOUTON ACCUEIL */
+/* ===================================== */
+
+.bouton-accueil {
+    display: inline-block;
+
+    padding: 18px 30px;
+
+    background-color: #e10600;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.bouton-accueil:hover {
+    background-color: #b00500;
+
+    transform: scale(1.03);
+}
+
+
+/* ===================================== */
+/* FOOTER */
+/* ===================================== */
+
+footer {
+    margin-top: 60px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #36363e;
+
+    border-top: 3px solid #e10600;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+/* ===================================== */
+/* ADAPTATION AUX PETITS ÉCRANS */
+/* ===================================== */
+
+@media (max-width: 700px) {
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .introduction h1 {
+        font-size: 28px;
+    }
+
+    .carte-presentation,
+    .carte-projet,
+    .carte-equipe {
+        padding: 25px 18px;
+
+        border-radius: 25px;
+    }
+
+    .carte-presentation h2,
+    .carte-projet h2,
+    .carte-equipe h2 {
+        font-size: 20px;
+    }
+
+    .carte-photo {
+        width: 250px;
+        height: 300px;
+    }
+
+    .personne {
+        width: 100%;
+    }
+
+    .conclusion h2 {
+        font-size: 22px;
+    }
+
+}
+/* BARRE DE NAVIGATION */
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #38383F;
+    border-bottom: 3px solid #E10600;
+    margin: 0 0 25px;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 22px 10px;
+    font-family: "Lexend", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+}
+
+nav a:first-child {
+    border-left: none;
+}
+
+nav a:hover {
+    background-color: #E10600;
+}
+
+/* ADAPTATION AUX PETITS ÉCRANS */
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        flex: 1 1 30%;
+        font-size: 12px;
+    }
+}
+header {
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    margin: 0 0 25px;
+}
+/* NAVIGATION IDENTIQUE À L'ACCUEIL */
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #38383F;
+    border-bottom: 3px solid #E10600;
+    margin: 15px 0 25px;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 5px;
+    color: white;
+    text-decoration: none;
+    font-family: "Lexend", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+}

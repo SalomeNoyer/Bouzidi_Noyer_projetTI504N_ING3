@@ -121,10 +121,10 @@ body {
 .point.actif {
     background-color: var(--rouge);
 }
-/* ===== Page centrée comme sur la maquette ===== */
+/* ===== Page largeur ===== */
 body {
-    max-width: 1000px;
-    margin: 0 auto;      /* remplace "margin: 0" du body */
+    width: 100%;
+    margin: 0;
 }
 
 /* ===== Menu : barre fine avec séparateurs ===== */
@@ -254,4 +254,402 @@ h1, h2, h3, nav a, footer a {
     font-family: "Lexend", Arial, sans-serif;
     font-weight: 800;
     text-transform: uppercase;
+}
+/* ==========================================
+   CLASSEMENTS F1
+   ========================================== */
+
+/* Espacement entre les lignes */
+#classement-pilotes div,
+#classement-ecuries div {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+}
+
+/* Première place : or */
+#classement-pilotes div:nth-child(1),
+#classement-ecuries div:nth-child(1) {
+    border-left: 5px solid #FFD700;
+    background-color: #454545;
+}
+
+/* Deuxième place : argent */
+#classement-pilotes div:nth-child(2),
+#classement-ecuries div:nth-child(2) {
+    border-left: 5px solid #C0C0C0;
+    background-color: #454545;
+}
+
+/* Troisième place : bronze */
+#classement-pilotes div:nth-child(3),
+#classement-ecuries div:nth-child(3) {
+    border-left: 5px solid #CD7F32;
+    background-color: #454545;
+}
+/* Cartes des classements */
+.bloc-podium {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Animation au passage de la souris */
+.bloc-podium:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(225, 0, 0, 0.25);
+}
+
+/* Trait rouge décoratif */
+.bloc-podium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #e10600;
+}
+
+/* Titres des classements */
+.bloc-podium h3 {
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+/* Lignes des pilotes et écuries */
+#classement-pilotes div,
+#classement-ecuries div {
+    padding: 15px 20px;
+    margin: 12px auto;
+    max-width: 850px;
+    border-radius: 6px;
+    text-align: left;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Animation des lignes */
+#classement-pilotes div:hover,
+#classement-ecuries div:hover {
+    transform: translateX(8px);
+    background-color: #505057;
+}
+
+/* Texte pour accéder au classement complet */
+.bloc-podium .clic {
+    margin-top: 25px;
+    color: #cccccc;
+    font-style: italic;
+    transition: color 0.3s;
+}
+
+.bloc-podium:hover .clic {
+    color: #ff4444;
+}
+
+/* Accessibilité : limiter les animations si demandé */
+@media (prefers-reduced-motion: reduce) {
+    .bloc-podium,
+    #classement-pilotes div,
+    #classement-ecuries div,
+    .bloc-podium .clic {
+        transition: none;
+    }
+}
+/* ==========================================
+   CARROUSEL F1 AVEC IMAGES
+   ========================================== */
+
+/* Style général des diapositives */
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Image 1 : Course */
+.slide:nth-child(1) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-course.jpg");
+}
+
+/* Image 2 : Podium */
+.slide:nth-child(2) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-podium.jpg");
+}
+
+/* Image 3 : Départ */
+.slide:nth-child(3) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-depart.jpg");
+}
+
+/* Image 4 : Stands */
+.slide:nth-child(4) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.20)
+        ),
+        url("img_accueil/f1-stands.jpg");
+}
+
+/* Bande rouge légèrement transparente */
+.slide::after {
+    background-color: rgba(225, 6, 0, 0.45);
+}
+
+/* Animation des titres */
+.slide.active h1 {
+    animation: apparitionF1 0.8s ease-out;
+}
+
+@keyframes apparitionF1 {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Désactivation de l'animation si nécessaire */
+@media (prefers-reduced-motion: reduce) {
+    .slide.active h1 {
+        animation: none;
+    }
+}
+/* Supprimer la bande rouge diagonale du carrousel */
+.slide::after {
+    display: none;
+}
+/* Ajuster le cadrage de la première photo */
+.slide:nth-child(1) {
+    background-position: center 75%;
+}
+/* ==========================================
+   CARTES DES PODIUMS F1
+   ========================================== */
+
+/* Liste du dernier podium */
+#liste-podium {
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Chaque pilote du dernier podium */
+#liste-podium li {
+    background-color: #25252e;
+    color: white;
+
+    padding: 14px 18px;
+    margin-bottom: 12px;
+
+    border-radius: 8px;
+    border-left: 6px solid #e16900;
+
+    text-align: left;
+    font-weight: bold;
+
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Animation au survol */
+#liste-podium li:hover {
+    transform: translateX(5px);
+    background-color: #30303b;
+}
+
+/* Nom du Grand Prix */
+#nom-gp {
+    color: #cccccc;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Podium du Grand Prix précédent */
+#ancien-podium {
+    display: block;
+
+    background-color: #25252e;
+
+    padding: 15px;
+    margin-top: 12px;
+
+    border-radius: 8px;
+    border-left: 6px solid #e10600;
+
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* Désactiver les animations si nécessaire */
+@media (prefers-reduced-motion: reduce) {
+    #liste-podium li {
+        transition: none;
+    }
+}
+/* ==========================================
+   MEILLEUR TOUR ET ÉCURIE LEADER
+   ========================================== */
+
+/* Encadrés des informations */
+#infos p:first-child,
+#infos p:last-child {
+    background-color: #25252e;
+    padding: 18px 20px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border-left: 6px solid #e10600;
+    text-align: left;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Animation au passage de la souris */
+#infos p:first-child:hover,
+#infos p:last-child:hover {
+    transform: translateX(5px);
+    background-color: #30303b;
+}
+
+/* Mettre les valeurs en évidence */
+#meilleur-tour,
+#ecurie-leader {
+    font-weight: bold;
+    color: white;
+}
+
+/* Désactiver les animations si nécessaire */
+@media (prefers-reduced-motion: reduce) {
+    #infos p:first-child,
+    #infos p:last-child {
+        transition: none;
+    }
+}
+/* ==========================================
+   PODIUM DU GP PRÉCÉDENT
+   ========================================== */
+
+/* Conteneur des trois pilotes */
+#ancien-podium {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Carte individuelle de chaque pilote */
+#ancien-podium .pilote-ancien {
+    display: block;
+
+    background-color: #25252e;
+    color: white;
+
+    padding: 15px 20px;
+
+    border-radius: 8px;
+    border-left: 6px solid #e10600;
+
+    text-align: left;
+    font-weight: bold;
+
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Effet au passage de la souris */
+#ancien-podium .pilote-ancien:hover {
+    transform: translateX(5px);
+    background-color: #30303b;
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+    #ancien-podium .pilote-ancien {
+        transition: none;
+    }
+}
+/* ==========================================
+   BILLETTERIE F1
+   ========================================== */
+
+.billetterie-f1 {
+    margin-top: 35px;
+    padding: 22px 15px;
+    text-align: center;
+
+    background: linear-gradient(135deg, #25252e, #181820);
+
+    border: 1px solid #555;
+    border-radius: 12px;
+}
+
+.billetterie-icone {
+    font-size: 30px;
+}
+
+.billetterie-f1 h3 {
+    color: white;
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.billetterie-f1 p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.bouton-billetterie {
+    display: inline-block;
+
+    background-color: #e10600;
+    color: white;
+
+    padding: 14px 20px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.bouton-billetterie:hover {
+    background-color: #ff302a;
+    transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bouton-billetterie {
+        transition: none;
+    }
 }

@@ -41,7 +41,7 @@
                 <a href="./merch.html">Merch</a>
                 <a href="./events.html">Events</a>
                 <a href="./apropos.html">À Propos</a>
-                <a href="./stats.html">Statistiques</a>
+                <a href="./statistiques.html">Statistiques</a>
                 <a href="./minijeux.html">Mini-jeux</a>
             </nav>
         </header>
@@ -50,29 +50,50 @@
             <div id="ligne-actu">
                 <div id="dernier-podium">
                     <h3>Dernier podium</h3>
-                    <ol>
-                        <li>1. Pilote 1</li>
-                        <li>2. Pilote 2</li>
-                        <li>3. Pilote 3</li>
+                    <p id="nom-gp">Chargement du Grand Prix...</p>
+                    <ol id="liste-podium">
+                        <li>Chargement des résultats...</li>
                     </ol>
+                    <div class="billetterie-f1">
+                        <span class="billetterie-icone">🎟️</span>
+                        <h3>VIVEZ LA F1 EN DIRECT !</h3>
+                        <p>Ressentez l'adrénaline d'un Grand Prix depuis les tribunes !</p>
+                        <a href="https://tickets.formula1.com/fr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="bouton-billetterie">
+                        BILLETTERIE OFFICIELLE ↗
+                    </a>
+                </div>
                 </div>
                 <div id="infos">
-                    <p><strong>Meilleur tour :</strong> Pilote X (1:2x.xxx)</p>
-                    <p><strong>Podium de l'ancienne course :</strong> A, B, C</p>
-                    <p><strong>Écurie en tête du classement :</strong> Écurie Y</p>
+                    <!-- Meilleur tour -->
+                     <div class="info-section">
+                        <h3>🏎️ MEILLEUR TOUR</h3>
+                        <p id="meilleur-tour" class="info-carte">Chargement...</p>
+                    </div>
+                    <!-- Podium du GP précédent -->
+                     <div class="info-section">
+                        <h3>🏆 PODIUM DU GP PRÉCÉDENT</h3>
+                        <div id="ancien-podium">Chargement...</div>
+                    </div>
+                    <!-- Écurie leader -->
+                    <div class="info-section">
+                        <h3>🏁 ÉCURIE EN TÊTE DU CLASSEMENT</h3>
+                        <p id="ecurie-leader" class="info-carte">Chargement...</p>
+                    </div>
                 </div>
             </div>
-            <a href="./pilotes.html" class="bloc-podium">
+            <a href="./statistiques.html#classement-pilotes" class="bloc-podium">
                 <h3>Podium pilotes - Classement général</h3>
-                <p>1. Pilote 1 &nbsp; 2. Pilote 2 &nbsp; 3. Pilote 3</p>
+                <p id="classement-pilotes">Chargement du classement...</p>
                 <p class="clic">Cliquer pour voir le classement complet</p>
             </a>
-            <a href="./ecuries.html" class="bloc-podium">
+            <a href="./statistiques.html#classement-ecuries" class="bloc-podium">
                 <h3>Podium écuries - Classement général</h3>
-                <p>1. Écurie 1 &nbsp; 2. Écurie 2 &nbsp; 3. Écurie 3</p>
+                <p id="classement-ecuries">Chargement du classement...</p>
                 <p class="clic">Cliquer pour voir le classement complet</p>
             </a>
-            <p id="tickets"><a href="https://tickets.formula1.com/" target="_blank">Billetrie F1 officielle</a></p>
         </main>
         <footer>
             <a href="./apropos.html">A PROPOS</a>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events - F1 Fan Zone</title>
+
+    <!-- Police utilisée sur notre site -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styleevents.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="accueil.html">Actualité</a>
+            <a href="merch.html">Merch</a>
+            <a href="events.html">Events</a>
+            <a href="apropos.html">À propos</a>
+            <a href="statistiques.html">Statistiques</a>
+            <a href="minijeux.html">Mini-jeux</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INTRODUCTION -->
+        <section class="introduction">
+
+            <h1>🏁 EVENTS F1</h1>
+
+            <p>
+                La Formule 1, ça se vit aussi en dehors des circuits !
+                Découvre nos événements pour partager ta passion,
+                rencontrer d'autres fans et vivre des moments inoubliables.
+            </p>
+
+        </section>
+
+        <!-- FILTRES -->
+        <section class="filtres">
+
+            <button class="filtre actif" data-filtre="tous">
+                TOUS LES ÉVÉNEMENTS
+            </button>
+
+            <button class="filtre" data-filtre="gp">
+                🏎️ GRAND PRIX
+            </button>
+
+            <button class="filtre" data-filtre="hors-gp">
+                🎮 HORS GP
+            </button>
+
+        </section>
+
+        <!-- LISTE DES ÉVÉNEMENTS -->
+        <section class="grille-evenements">
+
+            <!-- MONACO -->
+            <article class="carte-evenement" data-categorie="gp">
+
+                <img
+                    src="img_events/circuit_monaco.jpg"
+                    alt="Circuit de Monaco pendant un Grand Prix"
+                >
+
+                <div class="contenu-carte">
+
+                    <span class="badge">GRAND PRIX</span>
+
+                    <h2>🇲🇨 MONACO GP FAN EXPERIENCE</h2>
+
+                    <p class="details">📅 23 mai 2027</p>
+                    <p class="details">📍 Monte-Carlo, Monaco</p>
+
+                    <p class="description">
+                        Vis une journée exceptionnelle dans l'ambiance
+                        du Grand Prix de Monaco ! Au programme :
+                        rencontre entre fans, animations et découverte
+                        de l'univers de la Formule 1.
+                    </p>
+
+                    <p class="participants">
+                        👥 <span id="nombre-monaco">128</span> participants
+                    </p>
+
+                    <button class="bouton-participer" data-evenement="monaco">
+                        🎟️ JE PARTICIPE
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- SILVERSTONE -->
+            <article class="carte-evenement" data-categorie="gp">
+
+                <img
+                    src="img_events/circuit_silverstone.jpg"
+                    alt="Supporters au circuit de Silverstone"
+                >
+
+                <div class="contenu-carte">
+
+                    <span class="badge">GRAND PRIX</span>
+
+                    <h2>🇬🇧 SILVERSTONE FAN VILLAGE</h2>
+
+                    <p class="details">📅 4 juillet 2027</p>
+                    <p class="details">📍 Silverstone, Royaume-Uni</p>
+
+                    <p class="description">
+                        Rejoins notre village de supporters pour célébrer
+                        l'un des circuits les plus mythiques de la F1 !
+                        Défis entre fans, animations et ambiance
+                        de course au rendez-vous.
+                    </p>
+
+                    <p class="participants">
+                        👥 <span id="nombre-silverstone">96</span> participants
+                    </p>
+
+                    <button class="bouton-participer" data-evenement="silverstone">
+                        🎟️ JE PARTICIPE
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- SIM RACING -->
+            <article class="carte-evenement" data-categorie="hors-gp">
+
+                <img
+                    src="img_events/esport_f1.jpg"
+                    alt="Simulateur de course de Formule 1"
+                >
+
+                <div class="contenu-carte">
+
+                    <span class="badge badge-hors-gp">HORS GP</span>
+
+                    <h2>🎮 F1 SIM RACING CHAMPIONSHIP</h2>
+
+                    <p class="details">📅 12 décembre 2026</p>
+                    <p class="details">📍 Paris, France</p>
+
+                    <p class="description">
+                        Tu rêves de devenir pilote de Formule 1 ?
+                        Affronte d'autres passionnés sur simulateur,
+                        réalise le meilleur chrono et tente de remporter
+                        notre championnat virtuel !
+                    </p>
+
+                    <p class="participants">
+                        👥 <span id="nombre-simracing">42</span> participants
+                    </p>
+
+                    <button class="bouton-participer" data-evenement="simracing">
+                        🎟️ JE PARTICIPE
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- FERRARI VS RED BULL -->
+            <article class="carte-evenement" data-categorie="hors-gp">
+
+                <img
+                    src="img_events/ferrarivsredbull.jpg"
+                    alt="Une Ferrari et une Red Bull sur circuit"
+                >
+
+                <div class="contenu-carte">
+
+                    <span class="badge badge-hors-gp">HORS GP</span>
+
+                    <h2>🔥 FERRARI VS RED BULL FAN BATTLE</h2>
+
+                    <p class="details">📅 16 janvier 2027</p>
+                    <p class="details">📍 Paris, France</p>
+
+                    <p class="description">
+                        Ferrari ou Red Bull : choisis ton camp !
+                        Participe à des quiz, des défis et des débats
+                        entre supporters pour défendre ton écurie préférée.
+                        Que la meilleure équipe gagne !
+                    </p>
+
+                    <p class="participants">
+                        👥 <span id="nombre-battle">75</span> participants
+                    </p>
+
+                    <button class="bouton-participer" data-evenement="battle">
+                        🎟️ JE PARTICIPE
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- KARTING -->
+            <article class="carte-evenement" data-categorie="hors-gp">
+
+                <img
+                    src="img_events/karting.jpg"
+                    alt="Circuit de karting en intérieur"
+                >
+
+                <div class="contenu-carte">
+
+                    <span class="badge badge-hors-gp">HORS GP</span>
+
+                    <h2>🏁 F1 KARTING CHALLENGE</h2>
+
+                    <p class="details">📅 6 février 2027</p>
+                    <p class="details">📍 Île-de-France</p>
+
+                    <p class="description">
+                        Passe de spectateur à pilote !
+                        Retrouve d'autres fans pour une compétition
+                        de karting avec qualifications, course finale
+                        et podium pour les trois meilleurs pilotes.
+                    </p>
+
+                    <p class="participants">
+                        👥 <span id="nombre-karting">32</span> participants
+                    </p>
+
+                    <button class="bouton-participer" data-evenement="karting">
+                        🎟️ JE PARTICIPE
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- SOIRÉE F1 -->
+            <article class="carte-evenement" data-categorie="hors-gp">
+
+                <img
+                    src="img_events/soirée_f1.jpg"
+                    alt="Projection de Formule 1 sur un écran géant"
+                >
+
+                <div class="contenu-carte">
+
+                    <span class="badge badge-hors-gp">HORS GP</span>
+
+                    <h2>🎬 F1 MOVIE & RACING NIGHT</h2>
+
+                    <p class="details">📅 20 février 2027</p>
+                    <p class="details">📍 Paris, France</p>
+
+                    <p class="description">
+                        Une soirée 100 % Formule 1 entre passionnés !
+                        Projection sur grand écran, discussions sur
+                        les moments cultes de la F1 et quiz pour
+                        tester tes connaissances.
+                    </p>
+
+                    <p class="participants">
+                        👥 <span id="nombre-soiree">64</span> participants
+                    </p>
+
+                    <button class="bouton-participer" data-evenement="soiree">
+                        🎟️ JE PARTICIPE
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- MESSAGE D'INSCRIPTION -->
+        <p id="message-inscription" aria-live="polite"></p>
+
+    </main>
+
+    <footer>
+        F1 FAN ZONE — EVENTS
+    </footer>
+
+    <script src="scriptevents.js"></script>
+
+</body>
+</html>

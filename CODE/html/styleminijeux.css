@@ -1,0 +1,560 @@
+/* =========================================
+   STYLE GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #15141d;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+}
+
+main {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* =========================================
+   BOUTON RETOUR
+========================================= */
+
+header {
+    padding: 25px 3%;
+    border-bottom: 3px solid #e10600;
+}
+
+.bouton-retour {
+    display: inline-block;
+    padding: 14px 25px;
+    background-color: #37363e;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.bouton-retour:hover {
+    background-color: #e10600;
+}
+
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.introduction {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.introduction h1 {
+    font-size: 35px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.introduction p {
+    color: #cccccc;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   CARTE DU JEU
+========================================= */
+
+.carte-jeu {
+    background-color: #37363e;
+    padding: 40px;
+    border-radius: 35px;
+    border-bottom: 5px solid #e10600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.carte-jeu h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #cccccc;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   ZONE DE DEPART
+========================================= */
+
+#zone-depart {
+    margin-bottom: 35px;
+}
+
+#zone-depart label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+#pseudo {
+    padding: 15px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    background-color: #25242e;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+    width: 250px;
+    max-width: 100%;
+}
+
+#pseudo:focus {
+    outline: none;
+    border-color: #e10600;
+}
+
+button {
+    padding: 15px 25px;
+    background-color: #e10600;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff3029;
+    transform: scale(1.03);
+}
+
+#bouton-demarrer {
+    margin-left: 10px;
+}
+
+
+/* =========================================
+   CIRCUIT F1
+========================================= */
+
+.circuit {
+    background-color: #1e1d27;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #555;
+}
+
+.piste {
+    height: 110px;
+    background-color: #45454b;
+    border-top: 5px dashed white;
+    border-bottom: 5px dashed white;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+#voiture {
+    position: absolute;
+    left: 2%;
+    top: 28px;
+    font-size: 42px;
+    transition: left 0.5s ease;
+}
+
+.ligne-arrivee {
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    font-size: 45px;
+}
+
+
+/* =========================================
+   INFORMATIONS DE COURSE
+========================================= */
+
+.infos-course {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.infos-course p {
+    background-color: #25242e;
+    padding: 18px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    border-left: 5px solid #e10600;
+}
+
+#chronometre,
+#progression {
+    color: #ff3b35;
+}
+
+
+/* =========================================
+   QUESTIONS ET REPONSES
+========================================= */
+
+#zone-quiz {
+    background-color: #25242e;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#question {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+#reponses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+#reponses button {
+    background-color: #37363e;
+    border: 2px solid #555;
+    padding: 20px;
+    text-align: center;
+}
+
+#reponses button:hover {
+    background-color: #e10600;
+    border-color: #e10600;
+}
+
+#message-reponse {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FIN DE COURSE
+========================================= */
+
+#zone-fin {
+    background-color: #25242e;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+#zone-fin[hidden] {
+    display: none;
+}
+
+#zone-fin h2 {
+    color: #ff3b35;
+}
+
+#temps-final {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CLASSEMENT DES JOUEURS
+========================================= */
+
+.carte-classement {
+    background-color: #37363e;
+    padding: 40px;
+    border-radius: 35px;
+    border-bottom: 5px solid #e10600;
+    text-align: center;
+}
+
+.carte-classement h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.carte-classement p {
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+th {
+    background-color: #e10600;
+    padding: 18px;
+    font-size: 14px;
+}
+
+td {
+    background-color: #25242e;
+    padding: 18px;
+    font-weight: bold;
+}
+
+td:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+td:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #37363e;
+    border-top: 3px solid #e10600;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .introduction h1 {
+        font-size: 26px;
+    }
+
+    .carte-jeu,
+    .carte-classement {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    #bouton-demarrer {
+        display: block;
+        margin: 15px auto 0;
+    }
+
+    #reponses {
+        grid-template-columns: 1fr;
+    }
+
+    .piste {
+        height: 90px;
+    }
+
+    #voiture {
+        font-size: 32px;
+        top: 22px;
+    }
+
+    .ligne-arrivee {
+        font-size: 35px;
+        top: 20px;
+    }
+
+    .infos-course p {
+        padding: 15px;
+    }
+
+    th,
+    td {
+        padding: 12px 8px;
+        font-size: 12px;
+    }
+}
+/* ===================================
+   QUESTIONS ET REPONSES DU MINI-JEU
+=================================== */
+
+#zone-quiz {
+    margin-top: 35px;
+    text-align: center;
+}
+
+#question {
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: white;
+}
+
+#reponses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.bouton-reponse {
+    background-color: #25252f;
+    color: white;
+    border: 2px solid #454550;
+    border-radius: 12px;
+    padding: 18px;
+    font-family: "Lexend", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.bouton-reponse:hover {
+    background-color: #e10600;
+    border-color: #e10600;
+}
+
+.bouton-reponse:disabled {
+    cursor: default;
+    opacity: 0.6;
+}
+
+#message-reponse {
+    margin-top: 20px;
+    font-weight: 700;
+    min-height: 25px;
+}
+
+/* Déplacement de la voiture */
+
+#voiture {
+    position: absolute;
+    left: 2%;
+    transition: left 0.7s ease;
+}
+
+/* Résultat final */
+
+#zone-fin {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#zone-fin h2 {
+    color: white;
+}
+
+#temps-final {
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+#bouton-rejouer {
+    background-color: #e10600;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-family: "Lexend", sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#bouton-rejouer:hover {
+    background-color: #b80500;
+}
+
+@media (max-width: 600px) {
+    #reponses {
+        grid-template-columns: 1fr;
+    }
+}
+/* BARRE DE NAVIGATION */
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #38383F;
+    border-bottom: 3px solid #E10600;
+    margin: 0 0 25px;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 22px 10px;
+    font-family: "Lexend", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+}
+
+nav a:first-child {
+    border-left: none;
+}
+
+nav a:hover {
+    background-color: #E10600;
+}
+
+/* ADAPTATION AUX PETITS ÉCRANS */
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        flex: 1 1 30%;
+        font-size: 12px;
+    }
+}
+header {
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    margin: 0 0 25px;
+}
+/* NAVIGATION IDENTIQUE À L'ACCUEIL */
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #38383F;
+    border-bottom: 3px solid #E10600;
+    margin: 15px 0 25px;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 5px;
+    color: white;
+    text-decoration: none;
+    font-family: "Lexend", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+}

@@ -1,0 +1,376 @@
+/* ==========================================
+   COULEURS ET STYLE F1
+   ========================================== */
+
+:root {
+    --rouge: #E10600;
+    --noir: #15151E;
+    --gris: #38383F;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--noir);
+    color: white;
+    font-family: "Lexend", Arial, sans-serif;
+}
+
+/* ==========================================
+   EN-TÊTE ET BOUTON RETOUR
+   ========================================== */
+
+.entete-stats {
+    background: linear-gradient(110deg, #25252e, #15151e);
+    border-bottom: 4px solid var(--rouge);
+    padding: 25px 4% 40px;
+}
+
+.bouton-retour {
+    display: inline-block;
+    background-color: #25252e;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    padding: 14px 20px;
+    border: 2px solid var(--rouge);
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.bouton-retour:hover {
+    background-color: var(--rouge);
+    transform: translateX(-5px);
+}
+
+.titre-page {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.titre-page h1 {
+    font-size: 48px;
+    font-weight: 800;
+    font-style: italic;
+    margin: 15px 0;
+}
+
+.titre-page p {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* ==========================================
+   CONTENU PRINCIPAL
+   ========================================== */
+
+main {
+    width: 95%;
+    max-width: 1400px;
+    margin: 35px auto;
+}
+
+.introduction {
+    margin-bottom: 30px;
+}
+
+.introduction h2 {
+    border-left: 8px solid var(--rouge);
+    padding-left: 15px;
+    font-style: italic;
+    font-size: 28px;
+}
+
+.introduction p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   RACCOURCIS
+   ========================================== */
+
+.raccourcis {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.raccourcis a {
+    flex: 1;
+    text-align: center;
+    background-color: #25252e;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 20px;
+    border-radius: 12px;
+    border-bottom: 4px solid var(--rouge);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.raccourcis a:hover {
+    background-color: var(--rouge);
+    transform: translateY(-4px);
+}
+
+/* ==========================================
+   CARTES DES CLASSEMENTS
+   ========================================== */
+
+.bloc-classement {
+    background-color: var(--gris);
+    border-radius: 35px;
+    border-bottom: 5px solid var(--rouge);
+    padding: 35px;
+    margin-bottom: 35px;
+    scroll-margin-top: 20px;
+}
+
+.bloc-classement h2 {
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+/* ==========================================
+   TABLEAUX
+   ========================================== */
+
+.tableau-conteneur {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th {
+    background-color: #25252e;
+    color: #cccccc;
+    text-align: left;
+    padding: 17px;
+    font-size: 14px;
+}
+
+td {
+    background-color: #25252e;
+    color: white;
+    padding: 18px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Bordure aux couleurs des écuries */
+
+tbody td:first-child {
+    border-left: 6px solid var(--couleur-equipe, #E10600);
+    border-radius: 8px 0 0 8px;
+}
+
+tbody td:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Arrondis de l'en-tête */
+
+th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Animation des lignes */
+
+tbody tr {
+    transition: transform 0.3s;
+}
+
+tbody tr:hover {
+    transform: translateX(5px);
+}
+
+tbody tr:hover td {
+    background-color: #30303b;
+}
+
+/* Position et points */
+
+.position {
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.nom-pilote {
+    font-weight: 800;
+}
+
+.nom-ecurie {
+    color: #dddddd;
+}
+
+.points {
+    font-size: 17px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   BOUTON RETOUR EN BAS
+   ========================================== */
+
+.retour-bas {
+    text-align: center;
+    margin: 45px 0;
+}
+
+/* ==========================================
+   PIED DE PAGE
+   ========================================== */
+
+footer {
+    background-color: var(--gris);
+    border-top: 3px solid var(--rouge);
+    text-align: center;
+    padding: 22px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .titre-page h1 {
+        font-size: 32px;
+    }
+
+    .raccourcis {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .bloc-classement {
+        padding: 18px 12px;
+        border-radius: 22px;
+    }
+
+    .bloc-classement h2 {
+        font-size: 19px;
+    }
+
+    th, td {
+        padding: 12px;
+        font-size: 13px;
+    }
+}
+
+/* Accessibilité */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .bouton-retour,
+    .raccourcis a,
+    tbody tr {
+        transition: none;
+    }
+}
+/* BARRE DE NAVIGATION */
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #38383F;
+    border-bottom: 3px solid #E10600;
+    margin: 0 0 25px;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 22px 10px;;
+    font-family: "Lexend", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+}
+
+nav a:first-child {
+    border-left: none;
+}
+
+nav a:hover {
+    background-color: #E10600;
+}
+
+/* ADAPTATION AUX PETITS ÉCRANS */
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        flex: 1 1 30%;
+        font-size: 12px;
+    }
+}
+header {
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    margin: 0 0 25px;
+}
+/* NAVIGATION IDENTIQUE À L'ACCUEIL */
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #38383F;
+    border-bottom: 3px solid #E10600;
+    margin: 15px 0 25px;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 5px;
+    color: white;
+    text-decoration: none;
+    font-family: "Lexend", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+}
+/* NAVIGATION STATISTIQUES SUR TOUTE LA LARGEUR */
+
+.entete-stats nav {
+    width: calc(100% + 8%);
+    margin-left: -4%;
+    margin-right: -4%;
+}

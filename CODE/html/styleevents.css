@@ -1,0 +1,427 @@
+/* ========================================
+   STYLE GENERAL
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #14131c;
+    color: white;
+
+    font-family: 'Lexend', sans-serif;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    padding: 25px 30px;
+
+    border-bottom: 3px solid #e10600;
+}
+
+.bouton-retour {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background-color: #36363e;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 800;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.bouton-retour:hover {
+    background-color: #e10600;
+}
+
+/* ========================================
+   CONTENU PRINCIPAL
+======================================== */
+
+main {
+    width: 95%;
+    max-width: 1450px;
+
+    margin: 40px auto;
+}
+
+/* ========================================
+   INTRODUCTION
+======================================== */
+
+.introduction {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.introduction h1 {
+    font-size: 38px;
+    font-weight: 800;
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    color: #d0d0d5;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.introduction .avertissement {
+    color: #a7a7ae;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* ========================================
+   FILTRES
+======================================== */
+
+.filtres {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.filtre {
+    padding: 14px 24px;
+
+    background-color: #36363e;
+    color: white;
+
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filtre:hover {
+    border-color: #e10600;
+}
+
+.filtre.actif {
+    background-color: #e10600;
+}
+
+/* ========================================
+   GRILLE DES EVENEMENTS
+======================================== */
+
+.grille-evenements {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+/* ========================================
+   CARTES
+======================================== */
+
+.carte-evenement {
+    background-color: #36363e;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    border-bottom: 5px solid #e10600;
+
+    transition: 0.3s;
+}
+
+.carte-evenement:hover {
+    transform: translateY(-5px);
+}
+
+/* ========================================
+   PHOTOS
+======================================== */
+
+.carte-evenement img {
+    width: 100%;
+    height: 270px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* ========================================
+   CONTENU DES CARTES
+======================================== */
+
+.contenu-carte {
+    padding: 30px;
+}
+
+.contenu-carte h2 {
+    font-size: 22px;
+    font-weight: 800;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   BADGES
+======================================== */
+
+.badge {
+    display: inline-block;
+
+    background-color: #e10600;
+    color: white;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.badge-hors-gp {
+    background-color: #252530;
+
+    border: 1px solid #777;
+}
+
+/* ========================================
+   DETAILS
+======================================== */
+
+.details {
+    color: #e5e5e5;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin: 10px 0;
+}
+
+.description {
+    color: #d0d0d5;
+
+    line-height: 1.8;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    min-height: 115px;
+}
+
+/* ========================================
+   PARTICIPANTS
+======================================== */
+
+.participants {
+    background-color: #252530;
+
+    padding: 15px;
+
+    border-left: 5px solid #e10600;
+    border-radius: 8px;
+
+    font-weight: 700;
+}
+
+/* ========================================
+   BOUTON PARTICIPER
+======================================== */
+
+.bouton-participer {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 17px;
+
+    background-color: #e10600;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.bouton-participer:hover {
+    background-color: #ff2525;
+}
+
+.bouton-participer.inscrit {
+    background-color: #18794e;
+}
+
+/* ========================================
+   MESSAGE D'INSCRIPTION
+======================================== */
+
+#message-inscription {
+    text-align: center;
+
+    font-weight: 700;
+
+    margin-top: 30px;
+
+    color: #ffffff;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    text-align: center;
+
+    background-color: #36363e;
+
+    padding: 20px;
+
+    margin-top: 60px;
+
+    border-top: 3px solid #e10600;
+
+    font-weight: 800;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .grille-evenements {
+        grid-template-columns: 1fr;
+    }
+
+    .introduction h1 {
+        font-size: 28px;
+    }
+
+    .contenu-carte {
+        padding: 20px;
+    }
+
+    .carte-evenement img {
+        height: 220px;
+    }
+
+    .description {
+        min-height: auto;
+    }
+}
+/* PHOTO MONACO : montrer davantage le bas de l'image */
+.carte-evenement:has(img[src*="circuit_monaco"]) img {
+    object-position: center 75%;
+}
+
+/* PHOTO ESPORT : montrer davantage le haut de l'image */
+.carte-evenement:has(img[src*="esport_f1"]) img {
+    object-position: center 20%;
+}
+/* BARRE DE NAVIGATION */
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #38383F;
+    border-bottom: 3px solid #E10600;
+    margin: 0 0 25px;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 22px 10px;
+    font-family: "Lexend", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+}
+
+nav a:first-child {
+    border-left: none;
+}
+
+nav a:hover {
+    background-color: #E10600;
+}
+
+/* ADAPTATION AUX PETITS ÉCRANS */
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        flex: 1 1 30%;
+        font-size: 12px;
+    }
+}
+header {
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    margin: 0 0 25px;
+}
+/* NAVIGATION IDENTIQUE À L'ACCUEIL */
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #38383F;
+    border-bottom: 3px solid #E10600;
+    margin: 15px 0 25px;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 5px;
+    color: white;
+    text-decoration: none;
+    font-family: "Lexend", Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+}

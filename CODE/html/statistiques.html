@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Statistiques - F1 Fan Zone</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stylestatistiques.css">
+</head>
+
+<body>
+
+    <header class="entete-stats">
+        <div class="titre-page">
+            <p>F1 FAN ZONE</p>
+            <h1>STATISTIQUES</h1>
+            <p>CLASSEMENTS DE LA SAISON EN COURS</p>
+        </div>
+        <nav>
+            <a href="accueil.html">Actualité</a>
+            <a href="merch.html">Merch</a>
+            <a href="events.html">Events</a>
+            <a href="apropos.html">À propos</a>
+            <a href="statistiques.html">Statistiques</a>
+            <a href="minijeux.html">Mini-jeux</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="introduction">
+            <h2>CLASSEMENTS GÉNÉRAUX</h2>
+            <p>
+                Retrouvez les positions, les écuries et les points
+                de tous les pilotes et constructeurs de Formule 1.
+            </p>
+        </div>
+
+        <div class="raccourcis">
+            <a href="#classement-pilotes">🏆 CLASSEMENT PILOTES ↓</a>
+            <a href="#classement-ecuries">🏁 CLASSEMENT ÉCURIES ↓</a>
+        </div>
+
+        <section id="classement-pilotes" class="bloc-classement">
+
+            <h2>🏆 CLASSEMENT GÉNÉRAL DES PILOTES</h2>
+
+            <div class="tableau-conteneur">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>POSITION</th>
+                            <th>PILOTE</th>
+                            <th>ÉCURIE</th>
+                            <th>POINTS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tableau-pilotes">
+                        <tr>
+                            <td colspan="4">Chargement du classement...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section id="classement-ecuries" class="bloc-classement">
+
+            <h2>🏁 CLASSEMENT GÉNÉRAL DES ÉCURIES</h2>
+
+            <div class="tableau-conteneur">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>POSITION</th>
+                            <th>ÉCURIE</th>
+                            <th>POINTS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tableau-ecuries">
+                        <tr>
+                            <td colspan="3">Chargement du classement...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <div class="retour-bas">
+            <a href="./accueil.html" class="bouton-retour">
+                ← RETOUR À L'ACCUEIL
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        F1 FAN ZONE — STATISTIQUES
+    </footer>
+
+    <script src="./scriptstatistiques.js"></script>
+
+</body>
+</html>

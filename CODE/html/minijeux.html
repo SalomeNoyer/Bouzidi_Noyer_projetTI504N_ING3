@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini-jeux - F1 Fan Zone</title>
+
+    <!-- Police identique à l'accueil -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styleminijeux.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="accueil.html">Actualité</a>
+            <a href="merch.html">Merch</a>
+            <a href="events.html">Events</a>
+            <a href="apropos.html">À propos</a>
+            <a href="statistiques.html">Statistiques</a>
+            <a href="minijeux.html">Mini-jeux</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- TITRE -->
+        <section class="introduction">
+
+            <h1>🏎️ MINI-JEUX F1</h1>
+
+            <p>
+                Teste tes connaissances en Formule 1,
+                réponds aux questions et franchis la ligne d'arrivée !
+            </p>
+
+        </section>
+
+
+        <!-- JEU PRINCIPAL -->
+        <section class="carte-jeu">
+
+            <h2>🏁 LE GRAND QUIZ F1</h2>
+
+            <p class="description">
+                Chaque bonne réponse fait avancer ta voiture.
+                Termine la course le plus rapidement possible !
+            </p>
+
+            <!-- IDENTIFICATION DU JOUEUR -->
+            <div id="zone-depart">
+
+                <label for="pseudo">Ton pseudo :</label>
+
+                <input
+                    type="text"
+                    id="pseudo"
+                    placeholder="Entre ton pseudo"
+                    maxlength="20"
+                >
+
+                <button id="bouton-demarrer">
+                    DÉMARRER LA COURSE
+                </button>
+
+            </div>
+
+
+            <!-- CIRCUIT -->
+            <div class="circuit">
+
+                <div class="piste">
+
+                    <span id="voiture">🏎️</span>
+
+                    <div class="ligne-arrivee">🏁</div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATIONS DE COURSE -->
+            <div class="infos-course">
+
+                <p>
+                    ⏱️ TEMPS :
+                    <span id="chronometre">00:00</span>
+                </p>
+
+                <p>
+                    🏁 PROGRESSION :
+                    <span id="progression">0/10</span>
+                </p>
+
+            </div>
+
+
+            <!-- QUESTIONS -->
+            <div id="zone-quiz">
+
+                <h3 id="question">
+                    Prêt à prendre le départ ?
+                </h3>
+
+                <div id="reponses">
+
+                    <!-- Les boutons de réponse seront créés en JavaScript -->
+
+                </div>
+
+                <p id="message-reponse"></p>
+
+            </div>
+
+
+            <!-- FIN DE COURSE -->
+            <div id="zone-fin" hidden>
+
+                <h2>🏆 COURSE TERMINÉE !</h2>
+
+                <p id="temps-final"></p>
+
+                <button id="bouton-rejouer">
+                    REJOUER
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLASSEMENT DES JOUEURS -->
+        <section class="carte-classement">
+
+            <h2>🏆 CLASSEMENT DES JOUEURS</h2>
+
+            <p>
+                Les meilleurs pilotes sont ceux qui terminent
+                le circuit le plus rapidement !
+            </p>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>POSITION</th>
+                        <th>PSEUDO</th>
+                        <th>TEMPS</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tableau-scores">
+
+                    <tr>
+                        <td colspan="3">
+                            Aucun score enregistré pour le moment.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        F1 FAN ZONE — MINI-JEUX
+    </footer>
+
+    <script src="scriptminijeux.js"></script>
+
+</body>
+</html>
